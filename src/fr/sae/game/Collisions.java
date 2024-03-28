@@ -76,13 +76,16 @@ public class Collisions {
         if (originalShape instanceof Rectangle) {
             Rectangle rectangle = (Rectangle) originalShape;
             return new Rectangle(rectangle.getX(), rectangle.getY(), rectangle.getWidth(), rectangle.getHeight());
+            
         } else if (originalShape instanceof Circle) {
             Circle circle = (Circle) originalShape;
             return new Circle(circle.getCenterX(), circle.getCenterY(), circle.getRadius());
+            
         } else if (originalShape instanceof Polygon) {
             Polygon polygon = (Polygon) originalShape;
             float[] points = polygon.getPoints();
             return new Polygon(points);
+            
         } else {
 
             return null;
@@ -90,6 +93,7 @@ public class Collisions {
     }
     
     public boolean willCollideWithMap(Shape playerShape) {
+    	
         for (Shape mapObject : this.collidables) {
             if (willCollide(playerShape, mapObject)) {
                 return true;

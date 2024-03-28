@@ -4,6 +4,8 @@ public interface Spell {
 	
 	void AttaqueMelee();
 	
+	void InvocationDeSatan();
+	
 	void Foudre();
 	void Glace();
 	void Feu();
@@ -13,6 +15,7 @@ public interface Spell {
 	
 	void Fuite();
 
-
-
+	void CoupDeGriffe();
+	void Miaulement();
+	
 }

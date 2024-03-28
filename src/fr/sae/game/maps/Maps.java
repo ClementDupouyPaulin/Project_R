@@ -1,9 +1,8 @@
 package fr.sae.game.maps;
 
-public class Maps extends Zone {
+public abstract class Maps {
 	
 	public Maps(){
-		super();
 		
 		
 	}
