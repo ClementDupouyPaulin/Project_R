@@ -59,22 +59,22 @@ public class Global {
 	public static void InitializeGame() throws SlickException { //Fonction d'initialisation de project complet
 		try {	
 			
-			Player P1;
-			Player P2;
+			Player P1; //Variable pour le joueur 1
+			Player P2; //Variable pour le joueur 2
 
 			// Initialisation de P1
 			
 			switch (Player1Classe) {
-			    case "Swordsman":
+			    case "Swordsman": //Switch case pour definir le type de classe du joueur Swordsman
 			        P1 = new Swordsman(Player1Name, 1, null);
 			        break;
-			    case "Berserker":
+			    case "Berserker": //Switch case pour definir le type de classe du joueur Berserker
 			        P1 = new Berserker(Player1Name, 1, null);
 			        break;
-			    case "Healer":
+			    case "Healer": //Switch case pour definir le type de classe du joueur Healer
 			        P1 = new Healer(Player1Name, 1, null);
 			        break;
-			    case "Mage":
+			    case "Mage": //Switch case pour definir le type de classe du joueur Mage
 			        P1 = new Mage(Player1Name, 1, null);
 			        break;
 

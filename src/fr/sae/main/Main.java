@@ -20,13 +20,12 @@ public class Main  {
     
     public static void main(String[] args) {
         try {
-
+            // Création de la fenêtre de jeu
             AppGameContainer app = new AppGameContainer(new StateBasedGame("RPG") {
             	
                 @Override
                 public void initStatesList(GameContainer gc) throws SlickException {
-                	
-                //Definition des layers un a un
+                	// Initialisation des différents états du jeu
                 	
                 	//Menus
                     this.addState(new MainMenu(1));
@@ -34,30 +33,31 @@ public class Main  {
                     this.addState(new OptionMenu(3));
                     this.addState(new ClassesSelect(4));
                     
-                    
-                    //Cinematiques
+                    //Cinématiques
                     this.addState(new IntroGame(5));
                     
                     //Maps
                     this.addState(new Foret(6));
-
                 }
             });
             
-            app.setShowFPS(false); 
-            app.setIcons(new String[] {"data/image.png"});
+            // Configuration de la fenêtre de jeu
+            app.setShowFPS(false); // Désactiver l'affichage des FPS
+            app.setIcons(new String[] {"data/image.png"}); // Définir l'icône de la fenêtre
             
+            // Récupération de la résolution de l'écran
             Global.width= app.getScreenWidth();
             Global.height= app.getScreenHeight();
             
+            // Définir le mode d'affichage de la fenêtre (plein écran)
             app.setDisplayMode(Global.width, Global.height, true);
-            //app.setDisplayMode(800, 600, false);
+            //app.setDisplayMode(800, 600, false); // Mode fenêtré (optionnel)
+            
+            // Démarrer le jeu
             app.start(); 
             
         } catch (SlickException e) {
             e.printStackTrace();
         }
-    }
-
-    
+    }   
 }
